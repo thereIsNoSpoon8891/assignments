@@ -4,12 +4,9 @@ list.addEventListener("submit", function(e){
     e.preventDefault() //prevents refresh
 
     let addedItem = list.title.value  //grabs text from input box
+    
     list.title.value = ""           // clears form after entered
-    // 3 step process 
-    // 1. createElement, capture in a variable 
-    // 2. edit the content: variable.textcontent 
-    // 3. append it: document.querySelector('ID').append(variable)
-
+    
     let newItem = document.createElement('li') // step 1
     
     newItem.textContent = addedItem             // step 2
@@ -33,23 +30,16 @@ list.addEventListener("submit", function(e){
     
     newItem.appendChild(newDeleteButton)//.setAttribute('id', 'newDeleteButton')
 
-
-                            // simpler method here....
     newDeleteButton.addEventListener('click', ()=>{newItem.remove()})
+  })                 
+    // simpler method here...^^^^
+                            
                                             // add () to keep the event from firing.
                                     //without the () my 'click' listener doesnt matter
     
     
-                // new item appended to the list with edit and delete buttons
-
-                // makinging the delete button function
-    
-                // let deleteButton = document.querySelector('')
-    
-                // deleteButton.addEventListener('click', function(e){
-        
-                // .remove()
-  })
+                
+  
 //console.log(newItem) 
 //})
 
@@ -58,3 +48,18 @@ list.addEventListener("submit", function(e){
 
     
 //}
+
+// 3 step process 
+    // 1. createElement, capture in a variable 
+    // 2. edit the content: variable.textcontent 
+    // 3. append it: document.querySelector('ID').append(variable)
+
+    // new item appended to the list with edit and delete buttons
+
+                // makinging the delete button function
+    
+                // let deleteButton = document.querySelector('')
+    
+                // deleteButton.addEventListener('click', function(e){
+        
+                // .remove()
